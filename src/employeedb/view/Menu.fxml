@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../Content/nebulae_sky-wide.jpg" />
+         </image>
+         <viewport>
+            <Rectangle2D height="500.0" width="300.0" />
+         </viewport>
+      </ImageView>
+      <ImageView fitHeight="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Content/Tetris%20Logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="61.0" layoutY="200.0" text="Start Game" textFill="WHITE" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font name="Segoe UI" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="272.0" text="Resume Game" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="344.0" text="Leaderboards" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="413.0" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
