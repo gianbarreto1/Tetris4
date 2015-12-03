@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="355.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40">
+   <children>
+      <Pane id="tetris_pane" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="200.0" stylesheets="@../../../bin/tetris/view/gameScreen.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <Pane id="preview" layoutX="218.0" layoutY="14.0" prefHeight="75.0" prefWidth="170.0" stylesheets="@../../../bin/tetris/view/gameScreen.css" AnchorPane.leftAnchor="218.0" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="220.0" layoutY="102.0" text="LEVEL" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="143.0" text="LINES" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="237.0" layoutY="204.0" text="SCORE" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="347.0" layoutY="109.0" text="1" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="343.0" layoutY="159.0" text="0" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="343.0" layoutY="218.0" text="0" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="210.0" layoutY="237.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="QUIT">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="PAUSE" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

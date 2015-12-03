@@ -24,22 +24,22 @@
             <Image url="@../../../Content/Tetris%20Logo.png" />
          </image>
       </ImageView>
-      <Label layoutX="61.0" layoutY="200.0" text="Start Game" textFill="WHITE" AnchorPane.topAnchor="200.0">
+      <Label fx:id="start" layoutX="61.0" layoutY="200.0" text="Start Game" textFill="WHITE" AnchorPane.leftAnchor="61.0" AnchorPane.rightAnchor="61.0" AnchorPane.topAnchor="200.0">
          <font>
             <Font name="Segoe UI" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="29.0" layoutY="272.0" text="Resume Game" textFill="WHITE">
+      <Label fx:id="resume" layoutX="36.0" layoutY="272.0" text="Resume Game" textFill="WHITE" AnchorPane.bottomAnchor="185.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="272.0">
          <font>
             <Font name="Segoe UI" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="35.0" layoutY="344.0" text="Leaderboards" textFill="WHITE">
+      <Label fx:id="leader" layoutX="41.0" layoutY="344.0" text="Leaderboards" textFill="WHITE" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="344.0">
          <font>
             <Font name="Segoe UI" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="122.0" layoutY="413.0" text="Exit" textFill="WHITE">
+      <Label fx:id="exit" layoutX="122.0" layoutY="413.0" text="Exit" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="36.0" />
          </font>

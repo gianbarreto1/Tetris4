@@ -1,0 +1,9 @@
+#tetris_pane {
+   -fx-border-color: BLACK;
+   -fx-border-width: 5px;
+}
+
+#preview {
+   -fx-border-color: BLACK;
+   -fx-border-width: 5px;
+}
