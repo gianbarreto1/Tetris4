@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import tetris.view.MainMenuController;
 
 public class Main extends Application {
 
@@ -37,6 +38,9 @@ public class Main extends Application {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("view/MainMenu.fxml"));
 			mainPane = (AnchorPane) loader.load();
+			
+			MainMenuController controller = loader.getController();
+			controller.setMain(this);
 			
 			Scene scene = new Scene(mainPane);
 			primaryStage.setScene(scene);

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tetris.view.MainMenuController">
    <children>
       <ImageView fitHeight="500.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
@@ -24,7 +24,7 @@
             <Image url="@../../../Content/Tetris%20Logo.png" />
          </image>
       </ImageView>
-      <Label fx:id="start" layoutX="61.0" layoutY="200.0" text="Start Game" textFill="WHITE" AnchorPane.leftAnchor="61.0" AnchorPane.rightAnchor="61.0" AnchorPane.topAnchor="200.0">
+      <Label fx:id="start" layoutX="61.0" layoutY="200.0" onMouseClicked="#handleStartGame" text="Start Game" textFill="WHITE" AnchorPane.leftAnchor="61.0" AnchorPane.rightAnchor="61.0" AnchorPane.topAnchor="200.0">
          <font>
             <Font name="Segoe UI" size="36.0" />
          </font>
@@ -34,12 +34,12 @@
             <Font name="Segoe UI" size="36.0" />
          </font>
       </Label>
-      <Label fx:id="leader" layoutX="41.0" layoutY="344.0" text="Leaderboards" textFill="WHITE" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="344.0">
+      <Label fx:id="leader" layoutX="41.0" layoutY="344.0" onMouseClicked="#handleLeaderBoard" text="Leaderboard" textFill="WHITE" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="344.0">
          <font>
             <Font name="Segoe UI" size="36.0" />
          </font>
       </Label>
-      <Label fx:id="exit" layoutX="122.0" layoutY="413.0" text="Exit" textFill="WHITE">
+      <Label fx:id="exit" layoutX="122.0" layoutY="413.0" onMouseClicked="#handleExit" text="Exit" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="36.0" />
          </font>
