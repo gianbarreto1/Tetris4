@@ -52,6 +52,9 @@ public class MainMenuController
 			Scene scene = new Scene(gamePane);
 			main.getPrimaryStage().setScene(scene);
 			main.getPrimaryStage().show();
+			GameScreenController controller = loader.getController();
+			controller.setMain(this.main.getMain());
+			controller.Initialize();
 		}
 		catch(IOException ex)
 		{

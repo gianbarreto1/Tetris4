@@ -3,20 +3,20 @@ package tetris;
 import java.io.IOException;
 
 import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Modality;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
+import tetris.view.GameScreenController;
 import tetris.view.MainMenuController;
 
 public class Main extends Application {
 
 	private Stage primaryStage;
 	private AnchorPane mainPane;
+	private MediaPlayer mp;
 	
 	public Main()
 	{
@@ -24,9 +24,21 @@ public class Main extends Application {
 	}
 	
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) 
+	{
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Tetris");
+		
+		Media media = new Media(Main.class.getResource("tetris_music.mp3").toString());
+		mp = new MediaPlayer(media);  // Creates a new thread that plays the media
+		
+		mp.setCycleCount(MediaPlayer.INDEFINITE);  // Set the media player to infinite loop
+		mp.play();  // need to tell the media player to start playing (similar to starting a thread)
+		//stops the media player when program closes
+        //existing bug may cause media player to stop prematurely without this
+		this.primaryStage.setOnCloseRequest(windowEvent -> {
+			mp.stop();
+		});
 		
 		showMainMenu();
 	}
@@ -55,6 +67,16 @@ public class Main extends Application {
 	public Stage getPrimaryStage()
 	{
 		return this.primaryStage;
+	}
+	
+	public MediaPlayer getMediaPlayer()
+	{
+		return this.mp;
+	}
+	
+	public Main getMain()
+	{
+		return this;
 	}
 	
 	public static void main(String[] args) {
