@@ -1,10 +1,9 @@
 package tetris.model;
 
-public class StraightPolymino extends Tetromino{
+public class Square extends Tetromino
+{
 
-	
-	
-	public StraightPolymino(Vector2<Integer> initialPosition)
+	public Square(Vector2<Integer> initialPosition)
 	{
 		super(initialPosition);
 	}
@@ -13,9 +12,9 @@ public class StraightPolymino extends Tetromino{
 	protected void SetBlocks() {
 		// TODO Auto-generated method stub
 		Blocks = new Vector2[3];
-		Blocks[0] = new Vector2(-1, 0);
-		Blocks[1] = new Vector2(1, 0);
-		Blocks[2] = new Vector2(2, 0);
+		Blocks[0] = new Vector2(1, 0);
+		Blocks[1] = new Vector2(0, 1);
+		Blocks[2] = new Vector2(1, 1);
 	}
 
 	@Override
@@ -25,13 +24,13 @@ public class StraightPolymino extends Tetromino{
 
 	@Override
 	public int getType() {
-		return 2;
+		return 1;
 	}
-
+	
 	@Override
 	public Tetromino Clone() {
 		// TODO Auto-generated method stub
-		Tetromino clone = new StraightPolymino(new Vector2(2,2));
+		Tetromino clone = new Square(new Vector2(2,2));
 		clone.SetPosition(this.getPosition().x, this.getPosition().y);
 		for (int i = 0; i < this.Blocks.length; i++)
 		{

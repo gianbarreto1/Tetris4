@@ -41,4 +41,5 @@ public abstract class Tetromino {
 		}
 	}
 	public abstract int getType();
+	public abstract Tetromino Clone();
 }

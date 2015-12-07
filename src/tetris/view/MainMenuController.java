@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import tetris.Main;
 
@@ -55,6 +56,7 @@ public class MainMenuController
 			GameScreenController controller = loader.getController();
 			controller.setMain(this.main.getMain());
 			controller.Initialize();
+			controller.setSceneListener(scene);
 		}
 		catch(IOException ex)
 		{
@@ -71,9 +73,14 @@ public class MainMenuController
 			loader.setLocation(Main.class.getResource("view/LeaderBoard.fxml"));
 			AnchorPane leaderBoard = (AnchorPane) loader.load();
 			
+			Stage leaderStage = new Stage();
+			leaderStage.setTitle("Leader Board");
+			leaderStage.initModality(Modality.WINDOW_MODAL);  // While window is open, nothing can happen to primary stage or its content
+			leaderStage.initOwner(main.getPrimaryStage());
 			Scene scene = new Scene(leaderBoard);
-			main.getPrimaryStage().setScene(scene);
-			main.getPrimaryStage().show();
+			leaderStage.setScene(scene);
+			
+			leaderStage.showAndWait();
 		}
 		catch(IOException ex)
 		{
@@ -85,5 +92,6 @@ public class MainMenuController
 	private void handleExit()
 	{
 		main.getPrimaryStage().close();
+		System.exit(1);
 	}
 }

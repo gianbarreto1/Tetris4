@@ -3,13 +3,17 @@ package tetris;
 import java.io.IOException;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
-import tetris.view.GameScreenController;
+import tetris.model.Images;
 import tetris.view.MainMenuController;
 
 public class Main extends Application {
@@ -24,8 +28,8 @@ public class Main extends Application {
 	}
 	
 	@Override
-	public void start(Stage primaryStage) 
-	{
+	public void start(Stage primaryStage) throws IOException {
+		Images.LoadImages();
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Tetris");
 		
